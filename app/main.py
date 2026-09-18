@@ -25,6 +25,7 @@ app.add_middleware(
 
 
 @app.get("/")
+@app.head("/")
 def root():
     return {"name": settings.app_name, "status": "ok"}
 
