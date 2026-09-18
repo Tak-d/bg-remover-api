@@ -11,7 +11,7 @@ COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
 # rembg のモデルを事前ダウンロード
-RUN python -c "from rembg import new_session; new_session('u2net')"
+RUN python -c "from rembg import new_session; new_session('u2netp')"
 
 COPY . .
 

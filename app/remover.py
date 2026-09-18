@@ -3,14 +3,14 @@ import io
 from PIL import Image
 from rembg import new_session, remove
 
-# 起動時に1回だけセッション作成
+# 起動時に1回だけセッション作成（軽量モデル）
 _session = None
 
 
 def get_session():
     global _session
     if _session is None:
-        _session = new_session("u2net")
+        _session = new_session("u2netp")
     return _session
 
 
