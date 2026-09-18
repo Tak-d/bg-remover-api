@@ -9,6 +9,8 @@ from app.auth import verify_api_key
 from app.config import settings
 from app.models import ApiResponse
 from app.remover import remove_background
+from app.remover import get_session
+get_session()  # 起動時にモデルをロード
 
 limiter = Limiter(key_func=get_remote_address)
 
